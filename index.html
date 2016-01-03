@@ -232,6 +232,7 @@
 		$('.navigate-right').addClass('pulse');
 		Reveal.addEventListener('slidechanged', function(event) {
 			$('.navigate-right').removeClass('pulse');
+			$('.instructions').remove();
 			// event.previousSlide, event.currentSlide, event.indexh, event.indexv
 		});
 	</script>
