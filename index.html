@@ -109,6 +109,18 @@
 			}
 		}
 		
+		/*.backgrounds {*/
+		/*   -webkit-filter: blur(4px) saturate(.5);*/
+		/*   -moz-filter: blur(4px) saturate(.7);*/
+		/*   -o-filter: blur(4px) saturate(.7);*/
+		/*   -ms-filter: blur(4px) saturate(.7);*/
+		/*   filter: blur(4px) saturate(.7);*/
+		/*}*/
+		
+		section {
+			background-color: rgba(33,30,30,0.8);
+		}
+
 		.instructions {
 			position: fixed;
 			width: auto;
@@ -127,9 +139,23 @@
 	<div class="reveal">
 		<!--<div class="instructions"> swipe or arrow keys to navigate </div>-->
 		<div class="slides">
+			<section>
 			<section data-background="img/rainbow-mansion.jpg">
 				<h1>Rainbow Mansion</h1>
-				<h3> An intentional community of people trying to change the world </h3> </section>
+				<h3> An intentional community of folks working to change the world </h3>
+			</section>
+				<section data-background="img/rainbow-mansion.jpg">
+					<div>
+					<p> Rainbow Mansion is our 5,000 square foot home here in the heart of Silicon Valley. </p>
+					
+					<p>	Our house is centered around our well stocked library, our well stocked wet bar, a new hardware lab, and our salon-hosting living room. </p>
+					
+					<p> On a given night you may overhear an impromptu lecture on the history of navigation, 
+					catch someone machining a slightly inappropriate object, 
+					or be conscripted to play a game invented in a debaucherous fit of creativity. </p>
+					</div>
+				</section>
+			</section>
 			<section data-background="img/rainbow-mansion.jpg">
 				<h1>Residents</h1>
 				<h4> Dan </h4>
@@ -137,7 +163,7 @@
 				<h4> Aurora </h4>
 				<h4> Vanesa </h4>
 				<h4> Jeremy </h4>
-				<h4> Jamie </h4>
+				<!--<h4> Jamie </h4>-->
 				<h4> Crystal </h4>
 				<h4> Uma </h4> 
 			</section>
@@ -170,10 +196,11 @@ and friends. </h4> </section>
 				progress: true,
 				history: true,
 				center: true,
-    			loop: true,
+    			loop: false,
 			    autoSlide: 5000,
 			    autoSlideStoppable: true,
 			    mouseWheel: true,
+    			//minScale: 0.2,
     			//previewLinks: true,
 				transition: 'convex',
 				dependencies: [{
