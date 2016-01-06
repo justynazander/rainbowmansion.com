@@ -170,6 +170,11 @@ and friends. </h4> </section>
 				progress: true,
 				history: true,
 				center: true,
+    			loop: true,
+			    autoSlide: 5000,
+			    autoSlideStoppable: true,
+			    mouseWheel: true,
+    			//previewLinks: true,
 				transition: 'convex',
 				dependencies: [{
 					src: 'lib/js/classList.js',
@@ -198,10 +203,10 @@ and friends. </h4> </section>
 				}, {
 					src: 'plugin/notes/notes.js',
 					async: true
-				}, {
+				}, /*{
 					src: 'plugin/menu/menu.js'
-				}],
-		    menu: {
+				}*/],
+		    /*menu: {
 		        side: 'left',
 		        numbers: false,
 		        hideMissingTitles: false,
@@ -212,7 +217,7 @@ and friends. </h4> </section>
 		        keyboard: false,
 		        themes: false,
 		        transitions: false
-		    }
+		    }*/
 		});
 		$('.navigate-right').addClass('pulse');
 		Reveal.addEventListener('slidechanged', function(event) {
@@ -222,6 +227,18 @@ and friends. </h4> </section>
 			}
 
 		);
+		
+		function setAutoSlide(value){
+			if(value != Reveal.isAutoSliding()){
+				Reveal.toggleAutoSlide();
+			}
+		}
+		
+		function onMouseWheel(){
+			setAutoSlide(false);
+		}
+		
+		document.addEventListener('mousewheel', onMouseWheel);
 	</script>
 </body>
 
